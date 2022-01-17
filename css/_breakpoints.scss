@@ -1,0 +1,112 @@
+@media screen and (min-width: 1100px) {
+    
+    body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        
+        &::before {
+            background-image: url(/images/bg-pattern-top-desktop.svg);
+            width: 40%;
+        }
+
+        &::after {
+            background-image: url(/images/bg-pattern-bottom-desktop.svg);
+            width: 80%;
+        }
+    }
+
+    .hero {
+        max-width: 1200px;
+        max-height: 800px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+
+        .top-section {
+            grid-row: 1 / 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 34px;
+
+            .intro {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+
+                &_heading {
+                    font-size: 42px;
+                    margin: 0 140px 20px 0;
+                }
+
+                &_paragraph {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin: 0 50px 0 0;
+                }
+            }
+
+            .rating {
+                margin: 0 0 0 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &_banner {
+                    width: 440px;
+                    height: 55px;
+                    padding: 0 30px;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+
+                    &:nth-child(2) {
+                        align-self: center;
+                    }
+
+                    &:nth-child(3) {
+                        align-self: flex-end;
+                    }
+                }
+
+                &_stars {
+                    margin-right: 30px;
+                    display: flex;
+
+                    & img:not(:last-child) {
+                        margin-right: 8px;
+                    }
+                }
+
+                &_paragraph {
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        .bottom-section {
+            margin-top: 34px;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .card {
+                width: 350px;
+                height: 234px;
+
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                    margin-right: 20px;
+                }
+
+                &:nth-child(2) {
+                    align-self: center;
+                }
+
+                &:nth-child(3) {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
